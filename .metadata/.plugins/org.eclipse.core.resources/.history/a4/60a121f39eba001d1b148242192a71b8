@@ -32,7 +32,9 @@ public class Professor {
 	}
 
 	public String toString() {
-		return "Professor:" + "\nNome: " + getNome() + "\nRegistro do professor " + getregistro();
+		return "Professor:"+
+				"\nNome: " + getNome() +
+				"\nRegistro do professor " + getregistro();
 	}
 
 }

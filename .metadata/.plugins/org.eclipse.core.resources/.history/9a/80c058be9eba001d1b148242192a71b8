@@ -142,13 +142,13 @@ public class Turma {
 			sb.append("\nProfessores cadastrados na turma: ");
 		}
 		for (Professor prof : professoresCadastrados) {
-			sb.append(prof.getNome() + " " + prof.getregistro() + "\n");
+			sb.append(prof.getNome() + " " + prof.getregistro());
 		}
 		if (alunosCadastrados.size() != 0) {
 			sb.append("\nAlunos matriculados na turma: ");
 		}
 		for (Aluno aluno : alunosCadastrados) {
-			sb.append(aluno.getNome() + " " + aluno.getCpf() + "\n");
+			sb.append(aluno.getNome() + " " + aluno.getCpf());
 		}
 		return sb.toString();
 	}

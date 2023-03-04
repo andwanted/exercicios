@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="entities.enums.Turma"/>
     <fullyQualifiedTypeName name="entities.enums.NivelCurso"/>
     <fullyQualifiedTypeName name="entities.Curso"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="javax.print.attribute.AttributeSetUtilities"/>
     <fullyQualifiedTypeName name="entities.Aluno"/>
@@ -32,4 +31,5 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="entities.enums.Turno"/>
     <fullyQualifiedTypeName name="entities.Professor"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

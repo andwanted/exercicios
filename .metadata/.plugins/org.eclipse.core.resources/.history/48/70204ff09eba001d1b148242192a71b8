@@ -95,6 +95,10 @@ public class Program {
 			}
 		}
 
+//		for (int i = 1; i <= contarProfReg;) {
+//
+//		}
+
 		System.out.println("Quantos alunos serão matriculados? ");
 		int contarAlunoMat = sc.nextInt();
 		i = 0;
@@ -108,6 +112,7 @@ public class Program {
 					Aluno aMatricula = new Aluno(a.getNome(), a.getIdade(), a.getCpf());
 					turma.addAlunosCadastrados(aMatricula);
 					System.out.println("Aluno: " + turma.getAlunosCadastrados().get(i).getNome() + " matriculado");
+
 					i++;
 					encontrado = true;
 					break;
