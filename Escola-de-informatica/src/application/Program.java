@@ -1,7 +1,6 @@
 package application;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -80,7 +79,7 @@ public class Program {
 			System.out.print("Nome procurado");
 			String professorProcurado = sc.next();
 			for (Professor p : turma.getProfessores()) {
-				if (p.getNome().contains(professorProcurado)) {
+				if (p.getNome().equals(professorProcurado)) {
 					Professor pCadastro = new Professor(p.getNome(), p.getregistro());
 					turma.addProfessoresCadastrados(pCadastro);
 					System.out.println(
@@ -104,7 +103,7 @@ public class Program {
 			System.out.print("Digite o nome do aluno: ");
 			String nomeAlunoMatricula = sc.next();
 			for (Aluno a : turma.getAlunos()) {
-				if (a.getNome().contains(nomeAlunoMatricula)) {
+				if (a.getNome().equals(nomeAlunoMatricula)) {
 					Aluno aMatricula = new Aluno(a.getNome(), a.getIdade(), a.getCpf());
 					turma.addAlunosCadastrados(aMatricula);
 					System.out.println("Aluno: " + turma.getAlunosCadastrados().get(i).getNome() + " matriculado");

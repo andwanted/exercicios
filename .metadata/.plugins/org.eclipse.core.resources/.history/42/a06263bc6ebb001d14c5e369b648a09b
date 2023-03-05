@@ -37,7 +37,7 @@ public class Curso {
 	}
 
 	public String toString() {
-		return "Curso: " + getNome() + "\nCodigo: " + getCodigo();
+		return "Curso:\n" + "Nome: " + getNome() + "\nCodigo: " + getCodigo();
 	}
 
 }

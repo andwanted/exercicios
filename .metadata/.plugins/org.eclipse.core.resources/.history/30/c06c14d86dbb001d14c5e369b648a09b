@@ -1,7 +1,6 @@
 package application;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -72,35 +71,50 @@ public class Program {
 		System.out.println("\n--------------------------");
 		System.out.println("Quantos professores serão cadastrados na turma?");
 		int contarProfReg = sc.nextInt();
-
+		sc.nextLine();
 		int i = 0;
-		boolean encontrado = false;
 
 		while (i < contarProfReg) {
-			
+			boolean encontrado = false;
+			System.out.print("Nome procurado");
+			String professorProcurado = sc.next();
+			for (Professor p : turma.getProfessores()) {
+				if (p.getNome().contains(professorProcurado)) {
+					Professor pCadastro = new Professor(p.getNome(), p.getregistro());
+					turma.addProfessoresCadastrados(pCadastro);
+					System.out.println(
+							"Professor: " + turma.getProfessoresCadastrados().get(i).getNome() + " cadastrado");
+					i++;
+					encontrado = true;
+					break;
+				}
+			}
+			if (encontrado == false) {
+				System.out.println("Não encontrado, digite novamente!");
+			}
 		}
 
-//		for (int i = 1; i <= contarProfReg;) {
-//
-//		}
-
-		int c = 0;
 		System.out.println("Quantos alunos serão matriculados? ");
 		int contarAlunoMat = sc.nextInt();
-		c = 0;
-		for (int y = 1; y <= contarAlunoMat; y++) {
+		i = 0;
+
+		while (i < contarAlunoMat) {
+			boolean encontrado = false;
 			System.out.print("Digite o nome do aluno: ");
 			String nomeAlunoMatricula = sc.next();
-			if (turma.getAlunos().get(c).getNome().contains(nomeAlunoMatricula)) {
-				for (Aluno aluno : turma.getAlunos()) {
-					if (nomeAlunoMatricula.equals(aluno.getNome())) {
-						turma.addAlunosCadastrados(aluno);
-						System.out.println(aluno.getNome() + " Cadastrado na turma.");
-					}
+			for (Aluno a : turma.getAlunos()) {
+				if (a.getNome().equals(nomeAlunoMatricula)) {
+					Aluno aMatricula = new Aluno(a.getNome(), a.getIdade(), a.getCpf());
+					turma.addAlunosCadastrados(aMatricula);
+					System.out.println("Aluno: " + turma.getAlunosCadastrados().get(i).getNome() + " matriculado");
+					i++;
+					encontrado = true;
+					break;
 				}
-			} else
-				System.out.println("Aluno não encontrado");
-			c++;
+			}
+			if (encontrado == false) {
+				System.out.println("Não encontrado, digite novamente!");
+			}
 		}
 
 		System.out.println(turma.toString());
